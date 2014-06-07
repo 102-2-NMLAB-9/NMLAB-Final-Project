@@ -10,7 +10,7 @@ function Start()
 function OnGUI()
 {
 	
-	if(GUILayout.Button("start clone",GUILayout.Height(50))){
+	if(GUILayout.RepeatButton("start clone",GUILayout.Height(50))){
 	
 		//example about clone ball
 		var clone :GameObject = Instantiate(obj, obj.transform.position, obj.transform.rotation);
