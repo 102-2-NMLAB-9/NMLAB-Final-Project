@@ -261,6 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 0}
+  mySkin: {fileID: 11400000, guid: a4efdf035a9d10b4c8b7bdef0239e2fc, type: 2}
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483,6 +484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fb0849838f01984e97570a2be416f9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mySkin: {fileID: 11400000, guid: a4efdf035a9d10b4c8b7bdef0239e2fc, type: 2}
 --- !u!96 &504105140
 TrailRenderer:
   m_ObjectHideFlags: 0

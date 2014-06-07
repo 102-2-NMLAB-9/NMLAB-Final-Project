@@ -1,5 +1,6 @@
 //ball
 var obj : GameObject;
+var mySkin : GUISkin;
 
 function Start()
 {
@@ -9,8 +10,8 @@ function Start()
 
 function OnGUI()
 {
-	
-	if(GUILayout.RepeatButton("start clone",GUILayout.Height(50))){
+	GUI.skin = mySkin;
+	if(GUILayout.RepeatButton("start clone")){
 	
 		//example about clone ball
 		var clone :GameObject = Instantiate(obj, obj.transform.position, obj.transform.rotation);
