@@ -47,7 +47,18 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Game\Script\clone_ball.js" />
+     <Compile Include="Assets\Game\Script\otherScripts\Camera Scripts\MouseOrbit.js" />
+     <Compile Include="Assets\Game\Script\otherScripts\Camera Scripts\SmoothFollow.js" />
+     <Compile Include="Assets\Game\Script\otherScripts\Camera Scripts\SmoothLookAt.js" />
+     <Compile Include="Assets\Game\Script\otherScripts\General Scripts\DragRigidbody.js" />
+     <Compile Include="Assets\Game\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotor.js" />
+     <Compile Include="Assets\Game\Standard Assets\Character Controllers\Sources\Scripts\FPSInputController.js" />
+     <Compile Include="Assets\Game\Standard Assets\Character Controllers\Sources\Scripts\PlatformInputController.js" />
+     <Compile Include="Assets\Game\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonCamera.js" />
+     <Compile Include="Assets\Game\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.js" />
+     <Compile Include="Assets\Game\Standard Assets\Particles\Legacy Particles\TimedObjectDestructor.js" />
      <Compile Include="Assets\Main Menu\Script\Game Menu.js" />
+     <None Include="Assets\Game\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Game\Standard Assets\Skyboxes\_skybox info.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -47,6 +47,13 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Game\Script\add_square.cs" />
+     <Compile Include="Assets\Game\Script\move_square.cs" />
+     <Compile Include="Assets\Game\Script\otherScripts\General Scripts\ActivateTrigger.cs" />
+     <Compile Include="Assets\Game\Script\otherScripts\Utility Scripts\CombineChildren.cs" />
+     <Compile Include="Assets\Game\Script\otherScripts\Utility Scripts\MeshCombineUtility.cs" />
+     <Compile Include="Assets\Game\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
+     <Compile Include="Assets\Main Menu\Script\rotate_square.cs" />
+     <None Include="Assets\Game\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Game\Standard Assets\Skyboxes\_skybox info.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

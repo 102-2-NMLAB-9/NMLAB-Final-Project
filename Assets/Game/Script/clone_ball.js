@@ -15,6 +15,6 @@ function OnGUI()
 		//example about clone ball
 		var clone :GameObject = Instantiate(obj, obj.transform.position, obj.transform.rotation);
 		//destroy after 5 minutes
-		Destroy (clone, 5);
+		Destroy (clone, 60);
 	}
 }
