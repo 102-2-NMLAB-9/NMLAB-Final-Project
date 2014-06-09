@@ -4,6 +4,7 @@ var mySkin : GUISkin;
 
 function Start()
 {
+
 	//acquire ball
 	obj = GameObject.Find("Sphere");
 }
