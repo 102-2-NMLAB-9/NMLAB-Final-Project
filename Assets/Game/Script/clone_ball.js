@@ -25,13 +25,15 @@ function doWindow(windowID:int){
         showWindow++;
         object=GameObject.Find("Spider01");
     }  
-    if(GUI.Button(Rect(215,20,200,60),"spider"))
+    if(GUI.Button(Rect(215,20,200,60),"table"))
     {  
         showWindow++;
-        Debug.Log("spider"); 
+        object=GameObject.Find("Table_Wood");        
+        //Debug.Log("spider"); 
     }      
-    if(GUI.Button(Rect(10,85,200,60),"spider"))
+    if(GUI.Button(Rect(10,85,200,60),"chair"))
     {  
+        object=GameObject.Find("Chair_Metal_02");            
         showWindow++;    
     }  
     if(GUI.Button(Rect(215,85,200,60),"spider"))
