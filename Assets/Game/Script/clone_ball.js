@@ -23,7 +23,7 @@ function doWindow(windowID:int){
     if(GUI.Button(Rect(10,20,200,60),"spider"))
     {  
         showWindow++;
-        object=GameObject.Find("spider_myOldOne");
+        object=GameObject.Find("Spider01");
     }  
     if(GUI.Button(Rect(215,20,200,60),"spider"))
     {  
