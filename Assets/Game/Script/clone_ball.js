@@ -25,7 +25,7 @@ function doWindow(windowID:int){
         showWindow++;
         object=GameObject.Find("Spider01");
     }  
-    if(GUI.Button(Rect(215,20,200,60),"table"))
+    if(GUI.Button(Rect(215,20,200,60),"bench"))
     {  
         showWindow++;
         object=GameObject.Find("Table_Wood");        
@@ -36,8 +36,9 @@ function doWindow(windowID:int){
         object=GameObject.Find("Chair_Metal_02");            
         showWindow++;    
     }  
-    if(GUI.Button(Rect(215,85,200,60),"spider"))
+    if(GUI.Button(Rect(215,85,200,60),"table"))
     {  
+        object=GameObject.Find("Table_Metal");      
         showWindow++;
     }     
     if(GUI.Button(Rect(10,150,200,60),"spider"))
