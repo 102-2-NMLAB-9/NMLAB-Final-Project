@@ -108,7 +108,6 @@ GameObject:
   - 45: {fileID: 20}
   - 114: {fileID: 23}
   - 23: {fileID: 22}
-  - 102: {fileID: 21}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -320,27 +319,6 @@ Skybox:
   m_GameObject: {fileID: 7}
   m_Enabled: 1
   m_CustomSkybox: {fileID: 2100000, guid: a2126534b3a11b34e977105bd9e3cc03, type: 2}
---- !u!102 &21
-TextMesh:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 7}
-  m_Text: 
-  m_OffsetZ: 0
-  m_CharacterSize: 1
-  m_LineSpacing: 1
-  m_Anchor: 0
-  m_Alignment: 0
-  m_TabSize: 4
-  m_FontSize: 0
-  m_FontStyle: 0
-  m_RichText: 1
-  m_Font: {fileID: 0}
-  m_Color:
-    serializedVersion: 2
-    rgba: 4294967295
 --- !u!23 &22
 Renderer:
   m_ObjectHideFlags: 0
