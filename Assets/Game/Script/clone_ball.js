@@ -1,5 +1,5 @@
 //ball
-var object : GameObject;
+var object:GameObject = null;
 var mySkin : GUISkin; 
 var showWindow:int = 0;
 var state:int = 0;
@@ -114,8 +114,17 @@ function doWindow(windowID:int){
 		var ray:Ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 		var hit:RaycastHit;
 		if (Physics.Raycast(ray, hit))
-		{			
-		    var clone :GameObject = Instantiate(object, hit.point, object.transform.rotation);
-		    Destroy (clone, 60);
+		{	
+		    if(object == null)
+		    {
+			    var objCube:GameObject = GameObject.CreatePrimitive(PrimitiveType.Cube);
+			    objCube.transform.position = hit.point;
+			    objCube.renderer.material.color = Color.magenta;		    
+		    }
+		    else
+		    {		
+		        var clone :GameObject = Instantiate(object, hit.point, object.transform.rotation);
+		        Destroy (clone, 60);
+		    }
 		}
 	}	
