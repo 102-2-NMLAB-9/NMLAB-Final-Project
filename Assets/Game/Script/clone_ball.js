@@ -2,95 +2,177 @@
 var object:GameObject = null;
 var mySkin : GUISkin; 
 var showWindow:int = 0;
+var showWindow2:int = 0;
 var state:int = 0;
 var undelete = ["Terraingreen", "Terrainrock", "Terrainwhite", "Terrainyellow", "Me"];
 
 function OnGUI()
 {
 	GUI.skin = mySkin;	 
+	GUILayout.BeginHorizontal();
 	if(GUILayout.Button("create"))
 	{	
         showWindow++;
 	}
+	if(GUILayout.Button("Destroy"))
+	{	
+        showWindow2++;
+	}
+	GUILayout.EndHorizontal();
 	if(showWindow%2==1)
 	{    
 	   GUI.Window(0,Rect(250,10,420,410),doWindow,"選單");
 	}
-
+	if(showWindow2%2==1)
+	{    
+	   GUI.Window(0,Rect(250,10,420,410),doWindow2,"選單");
+	}
 }
 
-function doWindow(windowID:int){  
+function doWindow(windowID:int){
     if(GUI.Button(Rect(10,20,200,60),"spider"))
     {  
         showWindow++;
+       	state = 1;
         object=GameObject.Find("Spider01");
     }  
     if(GUI.Button(Rect(215,20,200,60),"bench"))
     {  
         showWindow++;
+        state = 1;
         object=GameObject.Find("Table_Wood");        
         //Debug.Log("spider"); 
     }      
     if(GUI.Button(Rect(10,85,200,60),"chair"))
     {  
         object=GameObject.Find("Chair_Metal_02");            
-        showWindow++;    
+        showWindow++;
+        state = 1;
     }  
     if(GUI.Button(Rect(215,85,200,60),"table"))
     {  
         object=GameObject.Find("Table_Metal");      
         showWindow++;
+        state = 1;
     }     
     if(GUI.Button(Rect(10,150,200,60),"spider"))
     {  
         showWindow++;
+        state = 1;
     }  
     if(GUI.Button(Rect(215,150,200,60),"spider"))
     {  
         showWindow++;
+        state = 1;
     }  
-    if(GUI.Button(Rect(10,215,200,60),"spider"))
+    if(GUI.Button(Rect(10,215,200,60),"flame"))
     {  
+    	object = GameObject.Find("Flame");
         showWindow++;
+        state = 1;
     }  
     if(GUI.Button(Rect(215,215,200,60),"spider"))
     {  
         showWindow++;
+        state = 1;
     }      
     if(GUI.Button(Rect(10,280,200,60),"spider"))
     {  
         showWindow++;
+        state = 1;
     }  
     if(GUI.Button(Rect(215,280,200,60),"spider"))
     {  
         showWindow++;
+        state = 1;
     }  
     if(GUI.Button(Rect(10,345,200,60),"spider"))
     {  
         showWindow++;
+        state = 1;
     }  
     if(GUI.Button(Rect(215,345,200,60),"elephant"))
     {  
         showWindow++;
+        state = 1;
+    }         
+}  
+
+function doWindow2(windowID:int){  
+    if(GUI.Button(Rect(10,20,200,60),"flame"))
+    {
+    	state = 2;
+        showWindow2++;
+        object=GameObject.Find("Flame"); 
+    }
+    if(GUI.Button(Rect(215,20,200,60),"destroy"))
+    {
+        state = 2;
+        showWindow2++;
+    }
+    if(GUI.Button(Rect(10,85,200,60),"destroy"))
+    {
+    	state = 2;
+        showWindow2++;
+    }
+    if(GUI.Button(Rect(215,85,200,60),"destroy"))
+    {
+    	state = 2;
+        showWindow2++;
+    }
+    if(GUI.Button(Rect(10,150,200,60),"destroy"))
+    {
+        showWindow2++;
+        state = 2;
+    }
+    if(GUI.Button(Rect(215,150,200,60),"spider"))
+    {
+    	state = 2;
+        showWindow2++;
+    }  
+    if(GUI.Button(Rect(10,215,200,60),"flame"))
+    {
+    	state = 2;
+        showWindow2++;
+    }  
+    if(GUI.Button(Rect(215,215,200,60),"spider"))
+    {
+    	state = 2;
+        showWindow2++;
+    }      
+    if(GUI.Button(Rect(10,280,200,60),"spider"))
+    {
+    	state = 2;
+        showWindow2++;
+    }  
+    if(GUI.Button(Rect(215,280,200,60),"spider"))
+    {
+    	state = 2;
+        showWindow2++;
+    }  
+    if(GUI.Button(Rect(10,345,200,60),"spider"))
+    {
+    	state = 2;
+        showWindow2++;
+    }  
+    if(GUI.Button(Rect(215,345,200,60),"elephant"))
+    {
+    	state = 2;
+        showWindow2++;
     }         
 }  
 
     function Update() 
 	{
-		if(Input.GetMouseButtonDown(0) && GUIUtility.hotControl == 0)
+		if(Input.GetMouseButtonDown(0) && state == 1 && GUIUtility.hotControl == 0)
 		{
-			state = 1;
 			Add ();
+			
 		}
-		else if(Input.GetMouseButtonDown(1) && GUIUtility.hotControl == 0)
+		else if(Input.GetMouseButtonDown(0) && state == 2 && GUIUtility.hotControl == 0)
 		{
-			state = 2;
 			Remove();
 		}
-		else if (Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1))
-		{
-			state = 0;
-		}		
 	}
 	
 	function Remove()
@@ -105,8 +187,12 @@ function doWindow(windowID:int){
 			{
 				if(obj.name == undelete[i]) {check = false;}
 			}
+			if( object != null ) {
+				var clone :GameObject = Instantiate(object, hit.point, object.transform.rotation);
+		        Destroy (clone, 2);
+		    }
 			if(check)
-			{		
+			{
 				Destroy(obj);
 			}
 		}
