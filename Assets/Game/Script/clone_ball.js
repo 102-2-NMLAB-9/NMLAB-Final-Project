@@ -73,18 +73,17 @@ function doWindow(windowID:int){
         showWindow++;
         state = 0;
     }     
-    if(GUI.Button(Rect(420,85,200,60),"spider"))
+    if(GUI.Button(Rect(420,85,200,60),"flower"))
     {  
         showWindow++;
        	state = 0;
-        object=GameObject.Find("Spider01");
+        object=GameObject.Find("Furniture_foliageplant_08_LOD1");
     }  
-    if(GUI.Button(Rect(625,85,200,60),"bench"))
+    if(GUI.Button(Rect(625,85,200,60),"pergola"))
     {  
         showWindow++;
         state = 0;
-        object=GameObject.Find("Table_Wood");        
-        //Debug.Log("spider"); 
+        object=GameObject.Find("Furniture_flowerstand_01_LOD1");        
     }     
     if(GUI.Button(Rect(830,85,200,60),"spider"))
     {  
