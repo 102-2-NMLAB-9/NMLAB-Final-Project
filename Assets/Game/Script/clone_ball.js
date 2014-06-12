@@ -61,9 +61,9 @@ function doWindow(windowID:int){
         showWindow++;
         state = 0;
     }  
-    if(GUI.Button(Rect(215,150,200,60),"TV"))
+    if(GUI.Button(Rect(215,150,200,60),"sofa2"))
     {  
-        object=GameObject.Find("TVset");       
+        object=GameObject.Find("sofa2");       
         showWindow++;
         state = 0;
     }  
@@ -91,8 +91,9 @@ function doWindow(windowID:int){
         showWindow++;
         state = 0;
     }  
-    if(GUI.Button(Rect(10,345,200,60),"spider"))
+    if(GUI.Button(Rect(10,345,200,60),"sofa1"))
     {  
+        object=GameObject.Find("sofa1");      
         showWindow++;
         state = 0;
     }  
