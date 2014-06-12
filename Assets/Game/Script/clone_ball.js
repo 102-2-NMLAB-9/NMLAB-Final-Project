@@ -55,34 +55,39 @@ function doWindow(windowID:int){
         showWindow++;
         state = 0;
     }     
-    if(GUI.Button(Rect(10,150,200,60),"spider"))
+    if(GUI.Button(Rect(10,150,200,60),"horse"))
     {  
+        object=GameObject.Find("Horse");       
         showWindow++;
         state = 0;
     }  
-    if(GUI.Button(Rect(215,150,200,60),"spider"))
+    if(GUI.Button(Rect(215,150,200,60),"TV"))
     {  
+        object=GameObject.Find("TVset");       
         showWindow++;
         state = 0;
     }  
-    if(GUI.Button(Rect(10,215,200,60),"flame"))
+    if(GUI.Button(Rect(10,215,200,60),"book"))
     {  
-    	object = GameObject.Find("Flame");
+    	object = GameObject.Find("book_0001c");
         showWindow++;
         state = 0;
     }  
-    if(GUI.Button(Rect(215,215,200,60),"spider"))
+    if(GUI.Button(Rect(215,215,200,60),"gorilla"))
     {  
+        object=GameObject.Find("Gorilla");       
         showWindow++;
         state = 0;
     }      
-    if(GUI.Button(Rect(10,280,200,60),"spider"))
+    if(GUI.Button(Rect(10,280,200,60),"pylon"))
     {  
+        object=GameObject.Find("pylon_2lanes_lod0");       
         showWindow++;
         state = 0;
     }  
-    if(GUI.Button(Rect(215,280,200,60),"spider"))
+    if(GUI.Button(Rect(215,280,200,60),"tower"))
     {  
+        object=GameObject.Find("Watchtower_Main");       
         showWindow++;
         state = 0;
     }  
