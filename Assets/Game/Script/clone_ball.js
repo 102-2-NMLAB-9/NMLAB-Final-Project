@@ -91,9 +91,9 @@ function doWindow(windowID:int){
        	state = 0;
         object=GameObject.Find("Furniture_flowerstand_01_LOD1");
     }      
-    if(GUI.Button(Rect(10,150,200,60),"horse"))
+    if(GUI.Button(Rect(10,150,200,60),"sofa1"))
     {  
-        object=GameObject.Find("Horse");       
+        object=GameObject.Find("sofa1");       
         showWindow++;
         state = 0;
     }  
@@ -134,24 +134,23 @@ function doWindow(windowID:int){
         showWindow++;
         state = 0;
     }      
-    if(GUI.Button(Rect(420,215,200,60),"spider"))
+    if(GUI.Button(Rect(420,215,200,60),"palm tree"))
     {  
         showWindow++;
        	state = 0;
-        object=GameObject.Find("Spider01");
+        object=GameObject.Find("Palm");
     }  
-    if(GUI.Button(Rect(625,215,200,60),"bench"))
+    if(GUI.Button(Rect(625,215,200,60),"cactus"))
     {  
         showWindow++;
         state = 0;
-        object=GameObject.Find("Table_Wood");        
-        //Debug.Log("spider"); 
+        object=GameObject.Find("Cactus_Tall_03");        
     }     
-    if(GUI.Button(Rect(830,215,200,60),"spider"))
+    if(GUI.Button(Rect(830,215,200,60),"horse"))
     {  
         showWindow++;
        	state = 0;
-        object=GameObject.Find("Spider01");
+        object=GameObject.Find("Horse");
     }      
     if(GUI.Button(Rect(10,280,200,60),"pylon"))
     {  
@@ -165,18 +164,17 @@ function doWindow(windowID:int){
         showWindow++;
         state = 0;
     }  
-    if(GUI.Button(Rect(420,280,200,60),"spider"))
+    if(GUI.Button(Rect(420,280,200,60),"brick"))
     {  
         showWindow++;
        	state = 0;
-        object=GameObject.Find("Spider01");
+        object=GameObject.Find("Brick_Red_01");
     }  
-    if(GUI.Button(Rect(625,280,200,60),"bench"))
+    if(GUI.Button(Rect(625,280,200,60),"stone"))
     {  
         showWindow++;
         state = 0;
-        object=GameObject.Find("Table_Wood");        
-        //Debug.Log("spider"); 
+        object=GameObject.Find("stone");        
     }     
     if(GUI.Button(Rect(830,280,200,60),"spider"))
     {  
@@ -184,9 +182,9 @@ function doWindow(windowID:int){
        	state = 0;
         object=GameObject.Find("Spider01");
     }      
-    if(GUI.Button(Rect(10,345,200,60),"sofa1"))
+    if(GUI.Button(Rect(10,345,200,60),"horse"))
     {  
-        object=GameObject.Find("sofa1");      
+        object=GameObject.Find("Horse");      
         showWindow++;
         state = 0;
     }  
