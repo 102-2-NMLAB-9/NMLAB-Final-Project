@@ -136,4 +136,23 @@ class Grenade extends MonoBehaviour
 		
 		Detonate();
 	}
+	
+	function OnTriggerEnter (other : Collider) {
+		if(exploded) return;
+		Destroy(other.gameObject);
+		
+		Detonate();
+	}
+	function OnTriggerExit (other : Collider) {
+		if(exploded) return;
+		Destroy(other.gameObject);
+		
+		Detonate();
+	}
+	function OnTriggerStay (other : Collider) {
+		if(exploded) return;
+		Destroy(other.gameObject);
+		
+		Detonate();
+	}
 }

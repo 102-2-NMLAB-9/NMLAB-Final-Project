@@ -421,8 +421,7 @@ function doWindow2(windowID:int){
 					}
 					grenade_rigidbody.velocity = (hit.point - tmp.transform.position).normalized*70;
 
-					if(check) Destroy(obj);
-					Destroy (clone2, 1);
+					Destroy (clone2, 4);
 				}
 		    }			
 		}
