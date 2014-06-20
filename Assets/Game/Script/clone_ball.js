@@ -1,10 +1,14 @@
 //ball
+@HideInInspector
 var object:GameObject = null;
+
+var grenadeobj : GameObject;
 var mySkin : GUISkin; 
 var showWindow:int = 0;
 var state:int = 0;
 var showWindow2:int = 0;
 var undelete = ["Terraingreen", "Terrainrock", "Terrainwhite", "Terrainyellow", "Me"];
+var shoot: boolean = false;
 
 function OnGUI()
 {
@@ -304,17 +308,20 @@ function doWindow(windowID:int){
     }             
 }  
 
-function doWindow2(windowID:int){  
+function doWindow2(windowID:int){
+	shoot = false;
     if(GUI.Button(Rect(10,20,200,60),"flame"))
     {
     	state = 1;
         showWindow2++;
         object=GameObject.Find("Flame"); 
     }
-    if(GUI.Button(Rect(215,20,200,60),"destroy"))
+    if(GUI.Button(Rect(215,20,200,60),"Grenade"))
     {
         state = 1;
         showWindow2++;
+		object = grenadeobj;
+		shoot = true;
     }
     if(GUI.Button(Rect(10,85,200,60),"destroy"))
     {
@@ -394,13 +401,30 @@ function doWindow2(windowID:int){
 				if(obj.name == undelete[i]) {check = false;}
 			}
 			if( object != null ) {
-				var clone :GameObject = Instantiate(object, hit.point, object.transform.rotation);
-		        Destroy (clone, 2);
-		    }
-			if(check)
-			{
-				Destroy(obj);
-			}
+				if( !shoot) {
+					var clone1 :GameObject = Instantiate(object, hit.point, object.transform.rotation);
+					Destroy (clone1, 2);
+					
+					if(check)
+					{
+						Destroy(obj);
+					}
+				}else {
+					var tmp : GameObject = GameObject.Find("Me");
+					var front : Vector3 = tmp.transform.forward;
+					var clone2 : GameObject = Instantiate(object, tmp.transform.position+3*front, object.transform.rotation);
+					var grenade_rigidbody : Rigidbody = clone2.rigidbody;
+					
+					if(clone2.rigidbody == null) {
+						Debug.Log("Rigidbody NULL");
+						grenade_rigidbody = clone2.AddComponent("Rigidbody");
+					}
+					grenade_rigidbody.velocity = (hit.point - tmp.transform.position).normalized*70;
+
+					if(check) Destroy(obj);
+					Destroy (clone2, 1);
+				}
+		    }			
 		}
 	}
 
