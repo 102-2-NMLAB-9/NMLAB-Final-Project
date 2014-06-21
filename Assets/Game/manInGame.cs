@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class manInGame : Photon.MonoBehaviour
 {
-    public Transform playerPrefab;
+    //public Transform playerPrefab;
 	int i = 0;
 
     public void Awake()
@@ -21,13 +21,7 @@ public class manInGame : Photon.MonoBehaviour
         }
 
         // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
-        PhotonNetwork.Instantiate(this.playerPrefab.name, transform.position, Quaternion.identity, 0);
-		if (i == 1) 
-		{
-			GameObject obj = GameObject.Find ("Me(Clone)");
-			Destroy (obj);
-			i++;
-		}
+        // PhotonNetwork.Instantiate(this.playerPrefab.name, transform.position, Quaternion.identity, 0);
     }
 
     public void OnGUI()
