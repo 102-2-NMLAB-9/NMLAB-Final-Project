@@ -16,10 +16,6 @@ public class NetworkMenu : MonoBehaviour
 
     private bool connectFailed = false;
 
-    public static readonly string SceneNameMenu = "DemoWorker-Scene";
-
-    public static readonly string SceneNameGame = "DemoWorkerGame-Scene";
-
     public void Awake()
     {
         // this makes sure we can use PhotonNetwork.LoadLevel() on the master client and all clients in the same room sync their level automatically
