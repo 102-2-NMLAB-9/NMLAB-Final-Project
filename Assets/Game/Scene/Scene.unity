@@ -109,7 +109,7 @@ GameObject:
   - 23: {fileID: 22}
   - 114: {fileID: 24}
   - 114: {fileID: 23}
-  - 114: {fileID: 25}
+  - 114: {fileID: 17}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -251,6 +251,32 @@ TerrainCollider:
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: eb72a7e9ae4eb4af483687c6284f5a19, type: 2}
   m_CreateTreeColliders: 1
+--- !u!114 &17
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 7}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754fe9cd749b7984fb03b936b7937778, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  object: {fileID: 0}
+  grenadeobj: {fileID: 100002, guid: 61ad8894020422b42a6738b9fee1cf4d, type: 2}
+  mySkin: {fileID: 11400000, guid: a4efdf035a9d10b4c8b7bdef0239e2fc, type: 2}
+  showWindow1: 0
+  state: 0
+  showWindow2: 0
+  showWindow3: 0
+  undelete:
+  - Terraingreen
+  - Terrainrock
+  - Terrainwhite
+  - Terrainyellow
+  - Me
+  shoot: 0
+  yrotaion: 0
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,18 +431,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726d8511cfbd66f46a38b9934ec59d82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &25
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 7}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 093d444b7807d8f4580046c3f81adf8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 400000, guid: 752f4cbf6f891034893c33178181acc5, type: 2}
 --- !u!1 &1928848
 GameObject:
   m_ObjectHideFlags: 0
