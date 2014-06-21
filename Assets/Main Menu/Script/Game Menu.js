@@ -17,7 +17,7 @@ function OnMouseUp() {
 		Application.Quit();
 	}
 	else {
-		Application.LoadLevel(1);
+		Application.LoadLevel(2);
 	}
 }
 
