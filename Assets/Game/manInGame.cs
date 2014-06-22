@@ -9,7 +9,7 @@ using UnityEngine;
 public class manInGame : Photon.MonoBehaviour
 {
     //public Transform playerPrefab;
-	int i = 0;
+	public GUISkin myskin;
 
     public void Awake()
     {
@@ -26,8 +26,9 @@ public class manInGame : Photon.MonoBehaviour
 
     public void OnGUI()
     {
+		GUI.skin = myskin;
 		GUILayout.BeginHorizontal ();
-		GUILayout.Space (1000);
+		GUILayout.Space (900);
         if (GUILayout.Button("Return to Lobby"))
         {
             PhotonNetwork.LeaveRoom();  // we will load the menu level when we successfully left the room

@@ -8295,6 +8295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mySkin: {fileID: 11400000, guid: a4efdf035a9d10b4c8b7bdef0239e2fc, type: 2}
+  grenadeobj: {fileID: 100002, guid: 61ad8894020422b42a6738b9fee1cf4d, type: 2}
 --- !u!23 &1546497661
 Renderer:
   m_ObjectHideFlags: 0

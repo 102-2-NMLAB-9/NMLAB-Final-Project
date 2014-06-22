@@ -16,6 +16,8 @@ public class NetworkMenu : MonoBehaviour
 
     private bool connectFailed = false;
 
+	public GUISkin myskin;
+
     public void Awake()
     {
         // this makes sure we can use PhotonNetwork.LoadLevel() on the master client and all clients in the same room sync their level automatically
@@ -40,6 +42,7 @@ public class NetworkMenu : MonoBehaviour
 
     public void OnGUI()
     {
+		GUI.skin = myskin;
         if (!PhotonNetwork.connected)
         {
             if (PhotonNetwork.connecting)
@@ -69,16 +72,16 @@ public class NetworkMenu : MonoBehaviour
 
 
         GUI.skin.box.fontStyle = FontStyle.Bold;
-        GUI.Box(new Rect((Screen.width - 400) / 2, (Screen.height - 350) / 2, 400, 300), "Join or Create a Room");
-        GUILayout.BeginArea(new Rect((Screen.width - 400) / 2, (Screen.height - 350) / 2, 400, 300));
+        GUI.Box(new Rect((Screen.width - 1000) / 2, (Screen.height - 600) / 2, 1000, 600), "Join or Create a Room");
+        GUILayout.BeginArea(new Rect((Screen.width - 1000) / 2, (Screen.height - 600) / 2, 1000, 600));
 
-        GUILayout.Space(25);
+        GUILayout.Space(50);
 
         // Player name
         GUILayout.BeginHorizontal();
-        GUILayout.Label("Player name:", GUILayout.Width(100));
+        GUILayout.Label("Player name:", GUILayout.Width(220));
         PhotonNetwork.playerName = GUILayout.TextField(PhotonNetwork.playerName);
-        GUILayout.Space(105);
+        GUILayout.Space(5);
         if (GUI.changed)
         {
             // Save name
@@ -86,14 +89,14 @@ public class NetworkMenu : MonoBehaviour
         }
         GUILayout.EndHorizontal();
 
-        GUILayout.Space(15);
+        GUILayout.Space(5);
 
         // Join room by title
         GUILayout.BeginHorizontal();
-        GUILayout.Label("Roomname:", GUILayout.Width(100));
+        GUILayout.Label("Roomname:", GUILayout.Width(200));
         this.roomName = GUILayout.TextField(this.roomName);
         
-        if (GUILayout.Button("Create Room", GUILayout.Width(100)))
+        if (GUILayout.Button("Create Room", GUILayout.Width(200)))
         {
             PhotonNetwork.CreateRoom(this.roomName, new RoomOptions() { maxPlayers = 10 }, null);
         }
@@ -104,7 +107,7 @@ public class NetworkMenu : MonoBehaviour
         GUILayout.BeginHorizontal();
         GUILayout.FlexibleSpace();
         //this.roomName = GUILayout.TextField(this.roomName);
-        if (GUILayout.Button("Join Room", GUILayout.Width(100)))
+        if (GUILayout.Button("Join Room", GUILayout.Width(200)))
         {
             PhotonNetwork.JoinRoom(this.roomName);
         }
@@ -119,7 +122,7 @@ public class NetworkMenu : MonoBehaviour
 
         GUILayout.Label(PhotonNetwork.countOfPlayers + " users are online in " + PhotonNetwork.countOfRooms + " rooms.");
         GUILayout.FlexibleSpace();
-        if (GUILayout.Button("Join Random", GUILayout.Width(100)))
+        if (GUILayout.Button("Join Random", GUILayout.Width(200)))
         {
             PhotonNetwork.JoinRandomRoom();
         }
@@ -127,7 +130,7 @@ public class NetworkMenu : MonoBehaviour
 
         GUILayout.EndHorizontal();
 
-        GUILayout.Space(15);
+        GUILayout.Space(5);
         if (PhotonNetwork.GetRoomList().Length == 0)
         {
             GUILayout.Label("Currently no games are available.");
