@@ -19,6 +19,7 @@ class Grenade extends MonoBehaviour
 	
 	private var exploded : boolean;
 	private var hit : RaycastHit;
+	private var undel : String[] = ["Terraingreen", "Terrainrock", "Terrainwhite", "Terrainyellow", "Me"];
 	
 	function Start ()
 	{
@@ -119,6 +120,11 @@ class Grenade extends MonoBehaviour
 	function OnCollisionEnter(c : Collision)
 	{
 		if(exploded) return;
+		var check : boolean = true;
+		for(var i:int =0; i<5; i++ )
+			if(c.gameObject.name == undel[i]) check = false;
+		
+		if(check ) Destroy(c.gameObject);
 		
 		Detonate();
 	}
@@ -126,6 +132,11 @@ class Grenade extends MonoBehaviour
 	function OnCollisionStay(c : Collision)
 	{
 		if(exploded) return;
+		var check : boolean = true;
+		for(var i:int =0; i<5; i++ )
+			if(c.gameObject.name == undel[i]) check = false;
+		
+		if(check ) Destroy(c.gameObject);
 		
 		Detonate();
 	}
@@ -133,25 +144,11 @@ class Grenade extends MonoBehaviour
 	function OnCollisionExit(c : Collision)
 	{
 		if(exploded) return;
+		var check : boolean = true;
+		for(var i:int =0; i<5; i++ )
+			if(c.gameObject.name == undel[i]) check = false;
 		
-		Detonate();
-	}
-	
-	function OnTriggerEnter (other : Collider) {
-		if(exploded) return;
-		Destroy(other.gameObject);
-		
-		Detonate();
-	}
-	function OnTriggerExit (other : Collider) {
-		if(exploded) return;
-		Destroy(other.gameObject);
-		
-		Detonate();
-	}
-	function OnTriggerStay (other : Collider) {
-		if(exploded) return;
-		Destroy(other.gameObject);
+		if(check ) Destroy(c.gameObject);
 		
 		Detonate();
 	}
