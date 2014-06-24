@@ -266,9 +266,9 @@ MonoBehaviour:
   GuiRect:
     serializedVersion: 2
     x: 950
-    y: 0
+    y: 250
     width: 300
-    height: 600
+    height: 400
   IsVisible: 1
   AlignBottom: 0
   messages: []
@@ -665,7 +665,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: f3caf1859eb25b541b96374a839b4aba, type: 2}
       propertyPath: m_Name
-      value: 
+      value: Me
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11400004, guid: f3caf1859eb25b541b96374a839b4aba, type: 2}
@@ -1101,7 +1101,7 @@ GameObject:
   - 143: {fileID: 1546497659}
   - 114: {fileID: 1546497658}
   m_Layer: 0
-  m_Name: 
+  m_Name: Me
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
