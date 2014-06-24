@@ -272,6 +272,7 @@ MonoBehaviour:
   IsVisible: 1
   AlignBottom: 0
   messages: []
+  myskin: {fileID: 11400000, guid: a4efdf035a9d10b4c8b7bdef0239e2fc, type: 2}
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -661,6 +662,10 @@ Prefab:
     - target: {fileID: 400000, guid: f3caf1859eb25b541b96374a839b4aba, type: 2}
       propertyPath: m_LocalScale.z
       value: .00999999978
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f3caf1859eb25b541b96374a839b4aba, type: 2}
+      propertyPath: m_Name
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11400004, guid: f3caf1859eb25b541b96374a839b4aba, type: 2}
@@ -1096,7 +1101,7 @@ GameObject:
   - 143: {fileID: 1546497659}
   - 114: {fileID: 1546497658}
   m_Layer: 0
-  m_Name: Me
+  m_Name: 
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

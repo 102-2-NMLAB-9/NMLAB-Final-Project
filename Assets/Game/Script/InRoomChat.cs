@@ -11,6 +11,7 @@ public class InRoomChat : Photon.MonoBehaviour
     public List<string> messages = new List<string>();
     private string inputLine = "";
     private Vector2 scrollPos = Vector2.zero;
+	public GUISkin myskin;
 
     public static readonly string ChatRPC = "Chat";
 
@@ -28,7 +29,7 @@ public class InRoomChat : Photon.MonoBehaviour
         {
             return;
         }
-        
+		GUI.skin = myskin;
         if (Event.current.type == EventType.KeyDown && (Event.current.keyCode == KeyCode.KeypadEnter || Event.current.keyCode == KeyCode.Return))
         {
             if (!string.IsNullOrEmpty(this.inputLine))
@@ -55,7 +56,7 @@ public class InRoomChat : Photon.MonoBehaviour
         }
         GUILayout.EndScrollView();
 
-        GUILayout.BeginHorizontal();
+        GUILayout.BeginVertical();
         GUI.SetNextControlName("ChatInput");
         inputLine = GUILayout.TextField(inputLine);
         if (GUILayout.Button("Send", GUILayout.ExpandWidth(false)))
@@ -64,7 +65,7 @@ public class InRoomChat : Photon.MonoBehaviour
             this.inputLine = "";
             GUI.FocusControl("");
         }
-        GUILayout.EndHorizontal();
+        GUILayout.EndVertical();
         GUILayout.EndArea();
     }
 
