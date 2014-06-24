@@ -266,7 +266,7 @@ MonoBehaviour:
   GuiRect:
     serializedVersion: 2
     x: 950
-    y: 300
+    y: 0
     width: 300
     height: 600
   IsVisible: 1

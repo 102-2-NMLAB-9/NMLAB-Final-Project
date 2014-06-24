@@ -33,6 +33,10 @@ public class manInGame : Photon.MonoBehaviour
         {
             PhotonNetwork.LeaveRoom();  // we will load the menu level when we successfully left the room
         }
+		if (Input.GetKeyDown (KeyCode.Escape)) 
+		{
+			PhotonNetwork.LeaveRoom();
+		}
     }
 
     public void OnMasterClientSwitched(PhotonPlayer player)

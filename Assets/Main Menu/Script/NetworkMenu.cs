@@ -42,6 +42,10 @@ public class NetworkMenu : MonoBehaviour
 
     public void OnGUI()
     {
+		if (Input.GetKeyDown (KeyCode.Escape)) 
+		{
+			Application.LoadLevel(0);
+		}
 		GUI.skin = myskin;
         if (!PhotonNetwork.connected)
         {
