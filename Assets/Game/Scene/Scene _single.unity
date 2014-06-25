@@ -10668,7 +10668,7 @@ MonoBehaviour:
   grenadeobj: {fileID: 100002, guid: 61ad8894020422b42a6738b9fee1cf4d, type: 2}
   bigbang: {fileID: 100012, guid: bf2d0b8833ec1440d97c8a40024ea2fe, type: 2}
   thunder: {fileID: 100000, guid: 1e0db9faa9a214eed9711548bc312b93, type: 2}
-  magma: {fileID: 0}
+  magma: {fileID: 100010, guid: 7b1a381b0716648a2bf515c6bc6fd9ce, type: 2}
 --- !u!23 &1546497661
 Renderer:
   m_ObjectHideFlags: 0
