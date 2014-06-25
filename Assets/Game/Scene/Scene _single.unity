@@ -10210,6 +10210,8 @@ MonoBehaviour:
   lightning: {fileID: 100000, guid: 86cb00a0afec94f8b937f58d0f51f4d0, type: 2}
   snowstorm: {fileID: 100004, guid: eac090ef174b4487b9b107a578a7df51, type: 2}
   meteor: {fileID: 100010, guid: 92f47ff0220244c049d7b275a9078312, type: 2}
+  cyclone: {fileID: 100010, guid: 851a222434a3c468f8fbe2400898caf8, type: 2}
+  fireball: {fileID: 100006, guid: dbf4a744d7fbb44c1a1ac83aa4f05b6e, type: 2}
 --- !u!23 &1546497661
 Renderer:
   m_ObjectHideFlags: 0
